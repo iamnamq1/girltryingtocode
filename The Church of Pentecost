@@ -1,0 +1,198 @@
+#include <iostream>
+
+#include <vector>
+
+#include <string>
+
+// Define a structure to represent Bible verses
+
+struct BibleVerse {
+
+    std::string book;
+
+    int chapter;
+
+    int verse;
+
+    std::string text;
+
+};
+
+// Function to display a Bible verse
+
+void displayBibleVerse(const BibleVerse& verse) {
+
+    std::cout << "Book: " << verse.book << std::endl;
+
+    std::cout << "Chapter: " << verse.chapter << std::endl;
+
+    std::cout << "Verse: " << verse.verse << std::endl;
+
+    std::cout << "Text: " << verse.text << std::endl;
+
+}
+
+int main() {
+
+    // Define variables to store user input
+
+    int menuChoice;
+
+    std::vector<BibleVerse> bibleVerses;
+
+    
+
+    // Main menu loop
+
+    while (true) {
+
+        // Display main menu options
+
+        std::cout << "Church App Menu:" << std::endl;
+
+        std::cout << "1. Read Bible" << std::endl;
+
+        std::cout << "2. Prayer Requests" << std::endl;
+
+        std::cout << "3. Announcements" << std::endl;
+
+        std::cout << "4. Daily Devotion" << std::endl;
+
+        std::cout << "5. Notifications" << std::endl;
+
+        std::cout << "0. Exit" << std::endl;
+
+        std::cout << "Enter your choice: ";
+
+        std::cin >> menuChoice;
+
+        
+
+        // Handle menu options
+
+        switch (menuChoice) {
+
+            case 1:
+
+                // Read Bible section
+
+                std::cout << "Enter book: ";
+
+                std::string book;
+
+                std::cin.ignore();
+
+                std::getline(std::cin, book);
+
+                
+
+                std::cout << "Enter chapter: ";
+
+                int chapter;
+
+                std::cin >> chapter;
+
+                
+
+                std::cout << "Enter verse: ";
+
+                int verse;
+
+                std::cin >> verse;
+
+                
+
+                std::cout << "Enter verse text: ";
+
+                std::string text;
+
+                std::cin.ignore();
+
+                std::getline(std::cin, text);
+
+                
+
+                // Create BibleVerse object and add it to the vector
+
+                BibleVerse bibleVerse;
+
+                bibleVerse.book = book;
+
+                bibleVerse.chapter = chapter;
+
+                bibleVerse.verse = verse;
+
+                bibleVerse.text = text;
+
+                bibleVerses.push_back(bibleVerse);
+
+                
+
+                std::cout << "Verse added successfully!" << std::endl;
+
+                break;
+
+                
+
+            case 2:
+
+                // Prayer section
+
+                // Add code for handling prayer requests
+
+                break;
+
+                
+
+            case 3:
+
+                // Announcements section
+
+                // Add code for handling announcements
+
+                break;
+
+                
+
+            case 4:
+
+                // Daily devotion section
+
+                // Add code for daily devotion
+
+                break;
+
+                
+
+            case 5:
+
+                // Notifications section
+
+                // Add code for handling notifications
+
+                break;
+
+                
+
+            case 0:
+
+                // Exit the app
+
+                std::cout << "Exiting the app. Goodbye!" << std::endl;
+
+                return 0;
+
+                
+
+            default:
+
+                std::cout << "Invalid choice. Please try again." << std::endl;
+
+                break;
+
+        }
+
+        
+
+        std::cout <<
+
